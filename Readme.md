@@ -3,17 +3,13 @@
 ## Openvpn alias
 
 ``
-
 alias htb="sudo openvpn ~/Downloads/your_openvpn_path"
-
 ``
 
 ## Append a new domain to etc/hosts
 
 ````
-
-
-addHost() {
+addhost() {
     if [ $# -ne 2 ]; then
         echo "Usage: addhost <ip> <domain>"
         return 1
@@ -30,11 +26,10 @@ addHost() {
         sudo sed -i "1i$ip  $domain" /etc/hosts
     fi
 }
-
 ````
 
 ## Examples
 
 `htb`
 
-`add host htb_ip htb_domain`
+`addhost htb_ip htb_domain`
